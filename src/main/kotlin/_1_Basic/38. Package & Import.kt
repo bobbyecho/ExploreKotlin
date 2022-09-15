@@ -1,5 +1,5 @@
-import Basic.LearnPackage.sayGoodbye
-import Basic.LearnPackage.sayHello
+import _1_Basic.LearnPackage.sayGoodbye
+import _1_Basic.LearnPackage.sayHello
 
 // or
 // import Basic.LearnPackage.*

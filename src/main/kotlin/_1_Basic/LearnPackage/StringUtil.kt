@@ -1,4 +1,4 @@
-package Basic.LearnPackage
+package _1_Basic.LearnPackage
 
 fun sayHello(name: String): String {
     return "hello $name";
