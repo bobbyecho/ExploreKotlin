@@ -12,7 +12,7 @@ open class Bob: PeopleOverriding() {
 
 class SuperBob: Bob() {
     // to make another child can't implement this method, use keyword final
-    final override fun sayHello() {
+    override fun sayHello() {
         println("Hello Super Bob")
     }
 }
