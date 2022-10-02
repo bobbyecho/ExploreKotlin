@@ -15,4 +15,6 @@ fun main() {
     sayHellow(fun(): String {
         return "Sarah"
     })
+
+   sayHellow(fun() = "Bob")
 }
