@@ -33,10 +33,10 @@ fun loginFun(name: String, pwd: String): Pair<String, String> {
 fun main() {
     val game = Game("Ragnarok", 250_000)
     val (name, price) = game
-    println(name, price.toString())
+    printlnmultiple(name, price.toString())
 
     val (min) = minmax(200, 600)
-    println(min.toString())
+    printlnmultiple(min.toString())
 
     val request = Login("Bobby", "Bob1234")
 
@@ -49,23 +49,23 @@ fun main() {
         return name == "Bobby" && password == "Bob1234"
     })
 
-    println(result1.toString())
-    println(result2.toString())
+    printlnmultiple(result1.toString())
+    printlnmultiple(result2.toString())
 
     val loginManual = LoginManual("bobby", "bobbysarah")
     val (a, b) = loginManual
-    println(a, b)
+    printlnmultiple(a, b)
 
     val (c, d) = loginFun("HH", "CC")
-    println(c, d)
+    printlnmultiple(c, d)
 }
 
-fun println(vararg string: String) {
+fun printlnmultiple(vararg string: String) {
     var result = ""
 
     for (str in string) {
         result += "$str "
     }
 
-    kotlin.io.println(result)
+    println(result)
 }
