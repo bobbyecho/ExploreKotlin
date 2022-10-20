@@ -1,10 +1,6 @@
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
-class NameWithLogSetterGetter(param: String) {
-    var name: String by LogSetterGetter(param)
-}
-
 class LogSetterGetter(var param: String) : ReadWriteProperty<Any, String> {
     override fun getValue(thisRef: Any, property: KProperty<*>): String {
         println("Get data ${property.name} with value ${this.param}")
@@ -15,6 +11,10 @@ class LogSetterGetter(var param: String) : ReadWriteProperty<Any, String> {
         println("Set data ${property.name} with value $value")
         this.param = value
     }
+}
+
+class NameWithLogSetterGetter(param: String) {
+    var name: String by LogSetterGetter(param)
 }
 
 fun main() {
